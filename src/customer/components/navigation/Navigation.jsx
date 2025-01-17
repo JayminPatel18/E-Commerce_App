@@ -212,6 +212,7 @@ export default function Navigation() {
         </Dialog>
       </Transition.Root>
 
+          {/* Web Menu */}
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Get free delivery on orders over $100
@@ -392,15 +393,7 @@ export default function Navigation() {
                       >
 
                       </Avatar>
-                      {/* <Button
-                        id="basic-button"
-                        aria-controls={open ? "basic-menu" : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open ? "true" : undefined}
-                        onClick={handleUserClick}
-                      >
-                        Dashboard
-                      </Button> */}
+                      
                       <Menu
                         id="basic-menu"
                         anchorEl={anchorEl}
