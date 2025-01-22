@@ -8,6 +8,7 @@ import { Box, Button, Grid, LinearProgress, Rating } from '@mui/material'
 import ProductReviewCard from './ProductReviewCard'
 import { mens_kurta } from '../../../data/men_kurta';
 import HomeSectionCard from '../HomeSectionCard/HomeSectionCard'
+import { useNavigate } from 'react-router-dom'
 
 const product = {
   name: 'Basic Tee 6-Pack',
@@ -66,6 +67,12 @@ function classNames(...classes) {
 export default function ProductDetails() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
   const [selectedSize, setSelectedSize] = useState(product.sizes[2])
+
+  const navigate = useNavigate();
+
+  const handleAddToCart=()=>{
+      navigate("/cart")
+  }
 
   return (
     <div className="bg-white lg:px-20">
@@ -213,7 +220,7 @@ export default function ProductDetails() {
                   </fieldset>
                 </div>
 
-                <Button variant="contained" sx={{
+                <Button onClick={handleAddToCart} variant="contained" sx={{
                   px: "2rem", py: "1rem", bgcolor: "#9155fd", display: "block",
                   textAlign: "left"
                 }}>
@@ -299,9 +306,11 @@ export default function ProductDetails() {
                       <p>Good</p>
                     </Grid>
                     <Grid item xs={7}>
-                      <LinearProgress sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7, "& .MuiLinearProgress-bar": {
+                      <LinearProgress sx={{
+                        bgcolor: "#d0d0d0", borderRadius: 4, height: 7, "& .MuiLinearProgress-bar": {
                           backgroundColor: "#fbc02d"
-                        }}} variant='determinate' value={45} />
+                        }
+                      }} variant='determinate' value={45} />
                     </Grid>
                   </Grid>
 
@@ -332,11 +341,11 @@ export default function ProductDetails() {
 
         {/* similar products */}
         <section className='pt-10'>
-            <h1 className='py-5 text-xl font-bold text-left'>Similar Products</h1>
+          <h1 className='py-5 text-xl font-bold text-left'>Similar Products</h1>
 
-            <div className='flex flex-wrap space-y-5'> 
-                {mens_kurta.map((item) => <HomeSectionCard product={item}/>)}
-            </div>
+          <div className='flex flex-wrap space-y-5'>
+            {mens_kurta.map((item) => <HomeSectionCard product={item} />)}
+          </div>
         </section>
 
       </div>

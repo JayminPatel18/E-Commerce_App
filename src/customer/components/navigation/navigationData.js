@@ -1,7 +1,7 @@
 export const navigation = {
     categories: [
       {
-       // id: 'women',
+       id: 'women',
         name: 'Women',
         featured: [
           {
@@ -19,7 +19,7 @@ export const navigation = {
         ],
         sections: [
           {
-            //id: 'clothing',
+            id: 'clothing',
             name: 'Clothing',
             items: [
               { name: 'Tops', id:"top", href: `{women/clothing/tops}` },
@@ -35,7 +35,7 @@ export const navigation = {
             ],
           },
           {
-            //id: 'accessories',
+            id: 'accessories',
             name: 'Accessories',
             items: [
               { name: 'Watches', id: 'watch' },
@@ -47,7 +47,7 @@ export const navigation = {
             ],
           },
           {
-           // id: 'brands',
+           id: 'brands',
             name: 'Brands',
             items: [
               { name: 'Full Nelson', id: '#' },
@@ -60,7 +60,7 @@ export const navigation = {
         ],
       },
       {
-       // id: 'men',
+       id: 'men',
         name: 'Men',
         featured: [
           {
@@ -79,7 +79,7 @@ export const navigation = {
         ],
         sections: [
           {
-            //id: 'clothing',
+            id: 'clothing',
             name: 'Clothing',
             items: [
               { name: 'Mens Kurtas', id: 'mens_kurta' },
@@ -93,7 +93,7 @@ export const navigation = {
             ],
           },
           {
-            //id: 'accessories',
+            id: 'accessories',
             name: 'Accessories',
             items: [
               { name: 'Watches', id: '#' },
@@ -105,7 +105,7 @@ export const navigation = {
             ],
           },
           {
-           // id: 'brands',
+           id: 'brands',
             name: 'Brands',
             items: [
               { name: 'Re-Arranged', id: '#' },
